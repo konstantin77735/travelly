@@ -1,0 +1,58 @@
+.footer {
+    background: #eeefee;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @include iPhone678Plus(padding-top, 35px);
+
+    &__copytight {
+        @include col();
+        @include size(6);
+        @include size-iPhone678Plus(12);
+        @include size-iPhoneX(12);
+
+        @include iPhone678Plus(order, 1);
+        @include iPhoneX(order, 1);
+
+        font-size: 1rem;
+        line-height: 1.5rem;
+        
+        @include iPhoneX(font-size, 1.08rem);
+    }
+
+}
+
+.nav-menu {
+    @include col();
+    @include size(3.7);
+    @include size-iPadPro(4.5);
+    @include size-iPad(5);
+    @include size-iPhone678Plus(12);
+    @include size-iPhoneX(12);
+
+    @include iPhone678Plus(order, 0);
+    @include iPhoneX(order, 0);
+
+
+    margin: 0 !important;
+    align-items: center;
+
+    @include iPad(margin-right, 15px !important);
+
+
+
+
+    &__item {
+        font-size: 1rem;
+        margin-bottom: 0;
+        color: #000;
+        text-decoration: none;
+
+
+        cursor: pointer;
+        
+        @include iPhoneX(font-size, 1.2rem);
+        @include iPhone678(font-size, 0.8rem);
+        @include iPhone5SE(font-size, 0.7rem);
+    }
+}

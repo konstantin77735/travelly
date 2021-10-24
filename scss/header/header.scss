@@ -1,0 +1,104 @@
+.header {
+    background: url(../img/header/header_bg.jpg) center no-repeat;
+    background-size: cover;
+    color: #fff;
+
+    height: 100vh;
+    
+    @include nestHubMax(height, 70vh);
+    @include nestHubMax(resolution, 'nestHubMax');
+    
+    @include nestHub(height, 100vh);
+    @include nestHub(resolution, 'nestHub');
+    
+    
+    
+    @include iPadPro(height, 45vh);
+    @include iPadPro(resolution, 'iPadPro');
+    
+    @include iPad(height, 50vh);
+    @include iPad(resolution, 'iPad');
+    
+    @include iPhoneX(height, 70vh);
+    @include iPhoneX(resolution, 'iPhoneX');
+    
+    @include iPhone678Plus(height, 80vh);
+    @include iPhone678Plus(resolution,'iPhone678Plus');
+    
+    @include iPhone678(height, 90vh);
+    @include iPhone678(resolution, 'iPhone678');
+    
+}
+
+
+.nav {
+    padding: 20px 0 0 0;
+}
+
+
+.offer {
+    margin: 130px auto 110px auto;
+
+    @include iPhone678Plus(margin, 100px auto 170px auto);
+
+    &__title {
+        font-size: 5.2rem;
+        line-height: 9rem;
+        font-weight: 300;
+        text-align: center;
+        color: #fff;
+        margin: 0;
+
+        @include iPad(font-size, 4.2rem);
+        @include iPad(line-height, 8rem);
+
+        @include galaxyFold(font-size, 1.3rem);
+
+        @include iPhone678Plus(font-size, 2rem);
+        @include iPhone678Plus(line-height, 6rem);
+
+        @include iPhone678(font-size, 1.8rem);
+        @include iPhone678(line-height, 5rem);
+        
+        @include iPhoneX(font-size, 3.5rem);
+        @include iPhoneX(line-height, 10rem);
+        
+        @include iPhone5SE(font-size, 1.5rem);
+        @include iPhone5SE(line-height, 5rem);
+
+    }
+
+}
+
+.form {
+    margin-top: 30px;
+    display: flex;
+
+    @include iPad(margin-top, 0);
+
+    &__input {
+        background: #fff;
+        border: none;
+        width: 328px;
+            
+        padding-left: 15px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        font-size: 1.5rem;
+
+        @include iPhoneX(width, 180px);
+        
+        @include iPhone678Plus(width, 235px);
+
+        @include iPhone678(width, 165px);
+        @include iPhone678(font-size, 1rem);
+
+
+        &:focus {
+
+            outline: none;
+        }
+    }
+
+
+}

@@ -1,0 +1,44 @@
+.details {
+
+    &__items {
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        @include iPhone678Plus(margin-top, 25px);
+        @include iPhone678Plus(margin-bottom, 25px);
+    }
+}
+
+.detail {
+    @include col();
+    @include size(4);
+    @include size-iPhone678Plus(12);
+    @include size-iPhoneX(12);
+
+    &__title {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+
+        @include iPhone678Plus(font-size, 1rem);
+        
+        @include iPhone5SE(font-size, 1rem);
+    }
+
+    &__desc {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+
+        @include iPad(font-size, 1.1rem);
+        @include iPad(line-height, 1.8rem);
+
+        @include iPhone678Plus(font-size, 0.9rem);
+        @include iPhone678Plus(line-height, 1.6rem);
+        
+        @include iPhone5SE(font-size, 0.7rem);
+        @include iPhone5SE(line-height, 1.2rem);
+
+        br {
+            @include iPad(display, none);
+        }
+    }
+}

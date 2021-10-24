@@ -1,0 +1,19 @@
+block header
+
+header.header#header
+    div.container
+        nav.nav.row
+            div.logo.row
+                a(href="#")
+                    img(src="img/header/plane.svg" alt="Travelly").logo__img
+                p.logo__text travelly
+            
+            include burger.pug
+        include mobile-menu.pug
+        
+        div.row
+            div.offer
+                h1.offer__title Where will you go next
+                form.form.justify-content-center
+                    input(type='text' placeholder='start typing...').form__input
+                    button(type='submit').btn.form__btn GO
