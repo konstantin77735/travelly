@@ -40,6 +40,7 @@
     }
 }
 
+
 .route {
     @include col();
     @include size(3);
@@ -54,7 +55,7 @@
     position: relative;
     top: 0;
     transition: box-shadow 0.2s linear,
-                top 0.2s linear;
+        top 0.2s linear;
 
 
     &:hover {
@@ -63,9 +64,38 @@
         box-shadow: 0 0 50px 17px rgba(0, 0, 0, 0.5);
     }
 
-    &__photo {
+    .no-webp &__photo {
         position: relative;
-
+        
+        /* мой мониторе */
+        height: 68%;
+        
+        @include nestHubMax(height, 70%);
+        
+        @include nestHub(height, 62%);
+        
+        @include iPadPro(height, 63%);
+        
+        @include iPad(height, 75%);
+        
+        @include surfaceDUO(height, 70%);
+        
+        @include iPhone678Plus(height, 72%);
+        
+        @include pixel2XL(height, 60%);
+        
+        @include pixel2(height, 73%);
+        
+        @include iPhoneX(height, 75%);
+        
+        @include iPhone678(height, 70%);
+        
+        @include galaxyS5(height, 70%);
+        
+        @include iPhone5SE(height, 67%);   
+        
+        @include galaxyFold(height, 60%);
+        
     }
 
     &__img {
@@ -73,6 +103,32 @@
         width: 100%;
 
     }
+
+
+    .no-webp &__img_1 {
+        content: url(../img/destinations/img1.jpg);
+        background: url(../img/destinations/img1.jpg);
+        height: 100%;
+    }
+
+    .no-webp &__img_2 {
+        content: url(../img/destinations/img2.jpg);
+        background: url(../img/destinations/img2.jpg);
+        height: 100%;
+    }
+
+    .no-webp &__img_3 {
+        content: url(../img/destinations/img3.jpg);
+        background: url(../img/destinations/img3.jpg);
+        height: 100%;
+    }
+
+    .no-webp &__img_4 {
+        content: url(../img/destinations/img4.jpg);
+        background: url(../img/destinations/img4.jpg);
+        height: 100%;
+    }
+
 
     &__price {
         position: absolute;
@@ -89,7 +145,7 @@
         font-weight: 700;
 
         @include galaxyFold(font-size, 0.9rem);
-        
+
         @include iPhone678Plus(font-size, 1rem);
         @include iPhone678Plus(font-size, 0.8rem);
         @include iPhone678Plus(line-height, 1.1rem);

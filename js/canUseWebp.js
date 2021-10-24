@@ -43,9 +43,7 @@ const setClassToBody = (() => {
     }
 })();
 
-//эти две строки для теста режима без webp
-document.documentElement.classList.add('no-webp')
-document.documentElement.classList.remove('webp')
+
 
 //Изначально в вёрстке все картинки в webp. В каждой подпапке webp-картинки в папке webp. Если браузер не поддерживает webp, то скрипт ставит тэгам img и image src и href на картинку на уровень выше и расширение ставит из атрибута data-ext
 
