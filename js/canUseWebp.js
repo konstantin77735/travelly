@@ -51,13 +51,7 @@ const setClassToBody = (() => {
 document.addEventListener('DOMContentLoaded', () => {
     const allImgTags = document.querySelectorAll('img');
     const allImageTags = document.querySelectorAll('image');
-
-    //
-    const allRasterExtToWebp = ['png', 'jpg', 'jpeg', 'psd', 'pdf', 'bmp', 'pcx', 'tiff', 'gif'];
-    const allVectorExtToWebp = ['ai', 'cdr', 'cmx', 'eps', 'fla', 'fh', 'pcx', 'svg', 'svgz', 'swf', 'wmf'];
-
-
-    //здесь будут все тэги, для которых будем менять источник изображения, если браузер НЕ поддерживает webp
+    //все тэги, для которых будем менять источник изображения, если браузер НЕ поддерживает webp
 
 
     //функция будем менять директории файлов для тэгов на такие, чтоб без webp
@@ -127,88 +121,5 @@ document.addEventListener('DOMContentLoaded', () => {
         iterateTags(allImgTags, 'src');
         
     }
-    
-    
-
-
-
-
-    /*
-    allImgs.forEach((item, index) => {
-        const content = item.outerHTML;
-
-        if (!canUseWebp || OS == "MacOS") {
-
-
-            function changeDiretionToFile(data) {
-                const {typeOfSource, dirToImg} = data;
-
-                const defaultExt = item.getAttribute('data-ext');
-
-                const srcArray = dirToImg.split('/');
-
-                const lastSrcArrayItem = srcArray[srcArray.length - 1];
-
-                const fileName = lastSrcArrayItem.split('.');
-
-                fileName.splice(fileName.length - 1, 1)
-
-
-
-                const fileNameWithNewExt = fileName + '.' + defaultExt;
-
-                //console.log(fileNameWithNewExt)
-
-                srcArray[srcArray.length - 1] = `${fileNameWithNewExt}`
-
-                //  console.log(srcArray[srcArray.length-1])
-
-                const penultArrayItemIndex = srcArray.length - 2;
-
-
-                srcArray.splice(penultArrayItemIndex, 1)
-
-
-
-                const newDirectionToFile = srcArray.join('/')
-
-
-                item.setAttribute(typeOfSource, newDirectionToFile)
-
-
-
-            }
-
-
-            if (content.includes('<img')) {
-                const typeOfSource = 'src';
-                const src = item.getAttribute('src');
-
-
-                changeDiretionToFile({
-                    typeOfSource: 'src',
-                    dirToImg: src,
-                })
-
-                //webp-картинки лежат рядом с картинками в папке webp/, чтобы не было путаницы, если картинок много
-
-            }
-
-            if (content.includes('<image')) {
-                const href = item.getAttribute('href');
-
-
-                changeDiretionToFile({
-                    typeOfSource: 'href',
-                    dirToImg: href,
-                })
-
-            }
-
-        }
-
-    });
-*/
-
 
 })
